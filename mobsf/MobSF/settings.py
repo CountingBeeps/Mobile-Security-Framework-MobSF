@@ -172,7 +172,7 @@ DATABASES = {
     'default': default,
 }
 MIGRATION_MODULES = {
-    'mobsf.MobSF': os.getenv('MOBSF_MIGRATION_MODULES', 'mobsf.MobSF')
+    'mobsf.StaticAnalyzer': os.getenv('MOBSF_MIGRATION_MODULES', 'mobsf.MobSF')
 }
 # ===============================================
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
