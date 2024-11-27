@@ -10,15 +10,15 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mobsf.MobSF.settings')
 
 
 def db():
-    execute_from_command_line([
-        '',
-        'makemigrations',
-    ])
-    execute_from_command_line([
-        '',
-        'makemigrations',
-        'StaticAnalyzer',
-    ])
+    # execute_from_command_line([
+    #     '',
+    #     'makemigrations',
+    # ])
+    # execute_from_command_line([
+    #     '',
+    #     'makemigrations',
+    #     'StaticAnalyzer',
+    # ])
     execute_from_command_line([
         '',
         'migrate',

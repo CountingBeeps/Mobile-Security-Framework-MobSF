@@ -45,7 +45,7 @@ def first_run(secret_file, base_dir, mobsf_home):
         except IOError:
             raise Exception('Secret file generation failed' % secret_file)
         # Run Once
-        make_migrations(base_dir)
+        #make_migrations(base_dir)
         migrate(base_dir)
         # Install JADX
         thread = threading.Thread(
