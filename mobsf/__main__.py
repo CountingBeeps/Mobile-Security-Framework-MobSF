@@ -25,8 +25,13 @@ def db():
     ])
     execute_from_command_line([
         '',
+        'createsuperuser --noinput --email ""',
+    ])
+    execute_from_command_line([
+        '',
         'create_roles',
     ])
+
 
 
 def main():
