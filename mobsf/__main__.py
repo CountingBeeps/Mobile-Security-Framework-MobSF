@@ -25,6 +25,15 @@ def db():
     ])
     execute_from_command_line([
         '',
+        'createsuperuser',
+        '--noinput',
+        '--username',
+        'mobsf',
+        '--password',
+        'mobsf'
+    ])
+    execute_from_command_line([
+        '',
         'create_roles',
     ])
 
