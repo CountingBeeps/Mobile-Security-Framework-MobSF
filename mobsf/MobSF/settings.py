@@ -17,6 +17,9 @@ from mobsf.MobSF.init import (
 )
 
 logger = logging.getLogger(__name__)
+
+print(os.environ)
+
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #       MOBSF CONFIGURATION
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
