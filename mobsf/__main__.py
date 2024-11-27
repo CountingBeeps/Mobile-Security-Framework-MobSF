@@ -29,7 +29,6 @@ def db():
     ])
 
 
-
 def main():
     try:
         if not connection.introspection.table_names():
