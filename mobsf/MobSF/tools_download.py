@@ -59,6 +59,7 @@ def download_file(url, file_path):
 
 def install_jadx(mobsf_home, version='1.5.0'):
     """Install JADX dynamically."""
+    return
     try:
         url = ('https://github.com/skylot/jadx/releases/download/'
                f'v{version}/jadx-{version}.zip')
