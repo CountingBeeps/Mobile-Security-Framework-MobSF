@@ -66,11 +66,6 @@ def install_jadx(mobsf_home, version='1.5.0'):
         jadx_dir = Path(mobsf_home) / 'tools' / 'jadx'
         extract_dir = jadx_dir / f'jadx-{version}'
 
-        system_jadx = os.getenv('MOBSF_JADX_BINARY')
-        if system_jadx is not None:
-            logger.info('JADX specfifed at %s', system_jadx)
-            return
-
         if extract_dir.exists():
             logger.info('JADX is already installed at %s', extract_dir)
             return
