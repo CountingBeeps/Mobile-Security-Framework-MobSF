@@ -49,14 +49,11 @@ def first_run(secret_file, base_dir, mobsf_home):
         #make_migrations(base_dir)
         migrate(base_dir)
         # Install JADX
-        if os.getenv('MOBSF_JADX_BINARY') is None:
-            print("HFHEHHEHAEHEAHEAHAEHAHAEHAE")
-            print(os.getenv('MOBSF_JADX_BINARY'))
-            thread = threading.Thread(
-                target=install_jadx,
-                name='install_jadx',
-                args=(mobsf_home.as_posix(),))
-            thread.start()
+        thread = threading.Thread(
+            target=install_jadx,
+            name='install_jadx',
+            args=(mobsf_home.as_posix(),))
+        thread.start()
         # Windows Setup
         windows_config_local(mobsf_home.as_posix())
     return secret_key
