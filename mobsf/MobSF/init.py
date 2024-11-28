@@ -50,6 +50,8 @@ def first_run(secret_file, base_dir, mobsf_home):
         migrate(base_dir)
         # Install JADX
         if os.getenv('MOBSF_JADX_BINARY') is None:
+            print("HFHEHHEHAEHEAHEAHAEHAHAEHAE")
+            print(os.getenv('MOBSF_JADX_BINARY'))
             thread = threading.Thread(
                 target=install_jadx,
                 name='install_jadx',
