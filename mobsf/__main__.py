@@ -28,7 +28,9 @@ def db():
         'createsuperuser',
         '--noinput',
         '--username',
-        'mobsf'
+        'mobsf',
+        '--email',
+        'example@example.com'
     ])
     execute_from_command_line([
         '',
