@@ -5,9 +5,8 @@ import platform
 from django.core.management import execute_from_command_line
 from django.db import connection
 
-
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mobsf.MobSF.settings')
-
+os.environ.setdefault('DJANGO_SUPERUSER_PASSWORD', 'mobsf')
 
 def db():
     # execute_from_command_line([
