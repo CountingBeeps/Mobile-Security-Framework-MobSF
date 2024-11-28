@@ -4,7 +4,6 @@ import os
 import random
 import subprocess
 import sys
-from stat import S_IWUSR, S_IREAD
 import shutil
 import threading
 from hashlib import sha256
@@ -153,7 +152,7 @@ def get_mobsf_home(use_home, base_dir):
             src = Path(base_dir) / 'signatures'
             try:
                 shutil.copytree(src, sig_dir, dirs_exist_ok=True)
-                os.chmod(sig_dir, S_IWUSR|S_IREAD)
+                os.chmod(sig_dir, 0o755)
             except Exception:
                 pass
         return mobsf_home.as_posix()
