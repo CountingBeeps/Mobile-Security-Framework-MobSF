@@ -153,11 +153,9 @@ def get_mobsf_home(use_home, base_dir):
             src = Path(base_dir) / 'signatures'
             try:
                 shutil.copytree(src, sig_dir, dirs_exist_ok=True)
-                for root, dirs, files in os.walk(sig_dir):
-                    for dir in dirs:
-                        os.chmod(os.path.join(root, dir), S_IWUSR|S_IREAD)
-                    for file in files:
-                        os.chmod(os.path.join(root, file), S_IWUSR|S_IREAD)
+                os.chmod(sig_dir, 0o755)
+                for file in sig_dir.iterdir():
+                    os.chmod(file, 0o755)
             except Exception:
                 pass
         return mobsf_home.as_posix()
